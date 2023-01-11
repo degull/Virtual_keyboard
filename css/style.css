@@ -3,6 +3,11 @@
 html[theme = 'dark-mode'] {
    filter: invert(100%) hue-rotate(180deg);
 }
+
+html,body {
+   width: 100%;
+   height: 100%;
+}
 .container {
    width: 1050px;
    margin: 0 auto;
@@ -54,4 +59,43 @@ input:checked + .slider {  /* slide 움직이면 배경 검정*/
  input:checked + .slider::before {
    /* slide 버튼을 넓이크기만큼 지정 & 움직임 */
    transform: translateX(26px);
+ }
+
+ .select-box {
+   position: relative;
+   margin-left: 60px;
+   height: 34px;
+ }
+
+ .select-box select {
+   font-size: 0.9rem;
+   padding: 2px 5px;
+   height: 34px;
+   width: 200px;
+ } 
+
+ .input-group {
+   margin: 100px 0;
+ }
+
+ .input {
+   border: none;
+   border-bottom: 2px solid lightgray;
+   width: 1050px;
+   height: 50px;
+   font-size: 30px;
+   text-align: center;
+   display: block;
+ }
+
+ .error-message {
+   color: #cc0033;
+   font-size: 30px;
+   line-height: 30px;
+   margin-top: 10px;
+   text-align: center;
+ }
+
+ .input-group .error-message {
+   display: none;
  }
