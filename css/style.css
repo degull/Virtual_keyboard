@@ -1,0 +1,57 @@
+*{user-select: none; outline: none;}
+
+html[theme = 'dark-mode'] {
+   filter: invert(100%) hue-rotate(180deg);
+}
+.container {
+   width: 1050px;
+   margin: 0 auto;
+   background: #9c9;
+}
+
+.menu {
+   display: flex;
+}
+
+.switch {
+   position: relative;
+   width: 60px;
+   height: 34px;
+}
+
+.switch input {
+   display: none;
+}
+
+.slider {
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: gray;
+   transition: all 0.4s;
+   border-radius: 34px;
+}
+
+.slider::before { /* slider 안 하얀 원 */
+   position: absolute;
+   content: '';
+   height: 26px;
+   width: 26px;
+   left: 4px;
+   bottom: 4px;
+   background-color: #fff;
+   border-radius: 50%;
+   transition: all 0.5s;
+}
+
+input:checked + .slider {  /* slide 움직이면 배경 검정*/
+   background-color: black;
+ }
+ 
+ input:checked + .slider::before {
+   /* slide 버튼을 넓이크기만큼 지정 & 움직임 */
+   transform: translateX(26px);
+ }
